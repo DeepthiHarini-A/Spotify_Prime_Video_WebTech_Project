@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+    <style>
+        body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+        font-family: sans-serif;
+        }
+        p{
+            color: cadetblue;
+        }
+        h1{
+            color: cadetblue;
+            text-align: center;
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #div1{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        img{
+        border-radius: 25px;
+    }
+    #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1110px;
+    }
+    #theme{
+        font-size: x-large;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    </style>
+    <title>COBRA MOVIE</title>
+</head>
+<body>
+    <div id="div1">
+        <img src="./logo.png" height="50px" width="150px">
+        
+        <div id="subdiv1">
+            <h1 style="display: inline; color: cadetblue; margin-left: 10px;" id="theme">Theme</h1>
+            <button onclick="bgdark()" style="border: 1px cadetblue solid; margin-left: 10px; border-radius: 10px; height: 20px; width: 20px; background-color: black;"></button>
+            <button onclick="bglight()" style="border: 1px cadetblue solid; margin-left: 5px; border-radius: 10px; height: 20px; width: 20px; background-color: white;"></button>
+            </div>
+            <a href="./index.html"><img  align="right" src="./home.jpg" height="50px" width="50px"></a>
+    </div>
+    <h1>COBRA</h1>
+    <p>                              </p>
+    <p>
+        Cobra is a 2022 Indian Tamil-language psychological action thriller film[6] written and directed by R. Ajay Gnanamuthu and produced by S. S. Lalit Kumar, under the banner 7 Screen Studio. The film stars Vikram in double role alongside Irfan Pathan, Roshan Mathew, Srinidhi Shetty, Mirnalini Ravi, Miya George, Sarjano Khalid, K. S. Ravikumar, Anandaraj, Robo Shankar and Meenakshi Govindarajan play supporting roles. It also marked the cinematic debut of Indian cricketer Irfan Pathan,[7] and the Tamil debuts of Srinidhi Shetty, Sarjano Khalid and Roshan Mathew.[8][9] The music is composed by A. R. Rahman, with cinematography handled by Harish Kannan and edited by John Abraham and Bhuvan Srinivasan.[10] In the film, Interpol officer Aslan Yilmas is assigned to catch a mysterious assassin named Cobra, who assassinates people using mathematical skills.
+    </p>
+    
+    <video src="./Cobra - Official Trailer _ Chiyaan Vikram _ AR Rahman _ Ajay Gnanamuthu _ 7 Screen Studio.mp4" controls loop muted heigth="800px" width="800px" class="center"></video>
+    <h2 style="color: cadetblue;">Rating:4/5</h2>
+</body>
+</html>

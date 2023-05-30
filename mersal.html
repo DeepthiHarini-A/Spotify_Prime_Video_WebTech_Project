@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+    <style>
+        body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+        font-family: sans-serif;
+        }
+        body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+        }
+        p{
+            color: cadetblue;
+        }
+        h1{
+            color: cadetblue;
+            text-align: center;
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #div1{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        img{
+        border-radius: 25px;
+    }
+    #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1110px;
+    }
+    #theme{
+        font-size: x-large;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    </style>
+    <title>MERSAL MOVIE</title>
+</head>
+<body>
+    <div id="div1">
+        <img src="./logo.png" height="50px" width="150px">
+        <div id="subdiv1">
+            <h1 style="display: inline; color: cadetblue; margin-left: 10px;" id="theme">Theme</h1>
+            <button onclick="bgdark()" style="border: 1px cadetblue solid; margin-left: 10px; border-radius: 10px; height: 20px; width: 20px; background-color: black;"></button>
+            <button onclick="bglight()" style="border: 1px cadetblue solid; margin-left: 5px; border-radius: 10px; height: 20px; width: 20px; background-color: white;"></button>
+            </div>
+        <a href="./index.html"><img  align="right" src="./home.jpg" height="50px" width="50px"></a>
+    </div>
+    <h1>MERSAL</h1>
+    <p>                              </p>
+    <p>
+        Mersal is a 2017 Indian Tamil-language action thriller film[6] directed by Atlee who co-wrote the film with V. Vijayendra Prasad and S. Ramana Girivasan. Produced by Thenandal Studio Limited in the studio's hundredth feature film production, the film stars Vijay and S. J. Suryah while Sathyaraj, Vadivelu, Nithya Menen, Kajal Aggarwal, Samantha Ruth Prabhu, Hareesh Peradi, Kovai Sarala and Sathyan appear in pivotal supporting roles. The story revolves around two brothers; one is a magician avenging his parents's deaths and medical crimes, and the other, a reputed doctor who charges meagre amounts from his patients.
+    </p>
+    
+    <video src="./Mersal - Trailer _ Vijay, Nithya Menon _ A R Rahman _ Atlee kumar.mp4" controls loop muted heigth="800px" width="800px" class="center"></video>
+    <h2 style="color: cadetblue;">Rating:4/5</h2>
+</body>
+</html>

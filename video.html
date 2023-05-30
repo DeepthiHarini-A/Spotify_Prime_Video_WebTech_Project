@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies.Spotprime</title>
+    <script>
+        function search(){
+            let choice=document.getElementById("social").value;
+            if(choice=="indian"){
+                window.location.href="./Indianactors.html";
+            }
+            else if(choice=="holly"){
+                window.location.href="./Englishactor.html";
+            }
+        }
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    img{
+        border-radius: 25px;
+    }
+    img:hover{
+        border-radius: 100px;
+        border: 0px transparent solid;
+    }
+    body{
+        background-size: cover;
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+        font-family: sans-serif;
+    }
+    .center{
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+        grid-template-columns: auto auto auto;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        
+    }
+    h1{
+    
+        text-align: center;
+    }
+    select{
+        border: 5px cadetblue;
+            border-radius: 10px;
+            width: fit-content;
+    }
+    input{
+        border: 3px cadetblue solid;
+        border-radius: 15px;
+        height: 30px;
+        width: 350px;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 13px;
+        margin-left: 100px;
+    }
+    input:focus{
+        border: 3px cadetblue solid;
+        outline: none;
+        border-radius: 15px;
+    }
+    ::placeholder{
+        color: cadetblue;
+    }
+    #div1{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    a{
+        color: cadetblue;
+        text-decoration: none;
+    }
+    a:hover{
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    select{
+        border: 3px cadetblue solid;
+        border-radius: 15px;
+        height: 35px;
+        width: 100px;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 5px;
+        margin-left: 10px;
+    }
+    select:focus{
+        border: 3px cadetblue solid;
+        outline: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    select:hover{
+        cursor: pointer;
+    }
+    #div2{
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    h2{
+        color: cadetblue;
+    }
+    tr{
+        margin: 20px;
+    }
+    .subdiv{
+        margin: 20px;
+    }
+    .fa-magnifying-glass{
+        position: absolute;
+        color: cadetblue;
+        top: 80px;
+        left: 800px;
+    }
+    button{
+        height: 35px;
+        width:50px;
+        color: cadetblue;
+        background-color: black;
+        border: 3px cadetblue solid;
+        border-radius: 15px;
+        margin-left: 5px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1120px;
+    }
+    #theme{
+        font-size: x-large;
+    }
+</style>
+<body>
+    <div id="div1">
+        <img src="./logo.png" height="50px" width="150px" align="left"><h1 style="color: cadetblue;  display: inline;">Watch Your Favourite Movies</h1>
+        <div id="subdiv1">
+        <h1 style="display: inline; color: cadetblue;" id="theme">Theme</h1>
+        <button onclick="bgdark()" style="border: 1px cadetblue solid; border-radius: 10px; height: 20px; width: 20px;"></button>
+        <button onclick="bglight()" style="border: 1px cadetblue solid; border-radius: 10px; height: 20px; width: 20px; background-color: white;"></button>
+        </div>
+        <a href="./index.html"><img align="right" src="./home.jpg" height="50px" width="50px"></a>
+        
+        </div>
+    <div id="div2">
+        
+            <input type="text" list="search" placeholder="Search"><i class="fa-solid fa-magnifying-glass"></i>
+            <datalist id="search">
+                <option>Master</option>
+                <option>Beast</option>
+                <option>Gilli</option>
+                <option>Harrypotter</option>
+                <option>Leo</option>
+                <option>Varisu</option>
+            </datalist>
+                <select id="social">
+                    <option value="" disabled selected>Languages</option>
+                    <option value="indian">Indian</option>
+                    <option value="holly">Hollywood</option>
+                </select>
+                <button onclick="search()">Next</button>
+    </div>
+    <h2 style="color:cadetblue; text-align: center;">Recently Watched</h2>
+    <div class="center">
+        
+        <div class="subdiv">
+                <a href="./mersal.html"><img src="mersal.jpg" height="200px" width="200px" > </a>
+                <h2>MERSAL</h2>
+                </div>
+                <div class="subdiv">
+                <a href="./Maharishimo.html"><img src="maharishi.jpg" height="200px" width="200px"> </a>
+                <h2>MAHARISHI</h2>
+                </div>
+                <div class="subdiv">
+                <a href="./thunivu.html"><img src="thunivu.jpg" height="200px" width="200px"> </a>
+                <h2>THUNIVU</h2>
+                </div>
+                <div class="subdiv">
+                <a href="./vikramve.html"><img src="hrithikvedh.jpg" height="200px" width="200px"> </a>
+                <h2>VIKRAM VEDHA</h2>
+            </div>
+                <div class="subdiv">
+                <a href="./vijay.html"><img src="master.jpg" height="200px" width="200px"> </a>
+                <h2>MASTER</h2>
+                </div>
+                <div class="subdiv">
+                <a href="./valimail.html"><img src="valimai.jpg" height="200px" width="200px"> </a>
+                <h2>VALIMAI</h2>
+                </div>
+            
+        
+    </div>
+</body>
+</html>

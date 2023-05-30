@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Actors</title>
+    <script>
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-size: 1500px 800px;
+            background-repeat: repeat;
+            font-weight: bolder;
+            background-image: url("./bag5.png");
+            font-family: sans-serif;
+        }
+        #div1{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h2{
+            color:cadetblue;
+        }
+        #div2{
+            display: grid;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+        grid-template-columns: auto auto auto ;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        }
+        #subdiv{
+            margin-left: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+        a{
+            display: flex;
+        }
+        img{
+        border-radius: 25px;
+        }
+        img:hover{
+        border-radius: 100px;
+        border: 0px transparent solid;
+    }
+    #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1120px;
+    }
+    #theme{
+        font-size: x-large;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="./logo.png" height="50px" width="150px"><h1 style="color: cadetblue; text-align: center; display: inline;">Choose Actors</h1>
+        <div id="subdiv1">
+            <h1 style="display: inline; color: cadetblue; margin-left: 10px;" id="theme">Theme</h1>
+            <button onclick="bgdark()" style="border: 1px cadetblue solid; margin-left: 10px; border-radius: 10px; height: 20px; width: 20px; background-color: black;"></button>
+            <button onclick="bglight()" style="border: 1px cadetblue solid; margin-left: 5px; border-radius: 10px; height: 20px; width: 20px; background-color: white;"></button>
+            </div>
+        <a href="./index.html"><img  align="right" src="./home.jpg" height="50px" width="50px"></a>
+    </div>
+    <div id="div2">
+            <div id="subdiv">
+                <a href="Suryaposter.html"><img src="./surya.jpg" height="200px" width="200px"></a>
+                <h2>SURYA</h2>
+                </div>  
+                <div id="subdiv">
+            <a href="Vijayposters.html"><img src="./vj.jpg" height="200px" width="200px"></a>
+            <h2>VIJAY</h2>
+                </div>
+                <div id="subdiv">
+            <a href="Vijayposters.html"><img src="./vjs.jpg" height="200px" width="200px"></a>
+            <h2>VIJAY SETHUPATHI</h2>
+            </div>
+        
+            <div id="subdiv">
+            <a href="Ajithposter.html"><img src="./ajith.jpg" height="200px" width="200px"></a>
+            <h2>AJITH</h2>
+            </div>
+            <div id="subdiv">
+            <a href="movieposter.html"><img src="./hrithik.jpg" height="200px" width="200px"></a>
+            <h2>HRITHIK</h2>
+            </div>
+            <div id="subdiv">
+            <a href="movieposter.html"><img src="./mb.jpg" height="200px" width="200px"></a>
+            <h2>MAHESH BABU</h2>
+            </div>
+        
+            <div id="subdiv">
+            <a href="movieposter.html"><img src="./dhanu.jpg" height="200px" width="200px"></a>
+            <h2>DHANUSH</h2>
+            </div>
+            <div id="subdiv">
+            <a href="movieposter.html"><img src="./vikram.jpg" height="200px" width="200px"></a>
+            <h2>VIKRAM</h2>
+            </div>
+            <div id="subdiv">
+            <a href="movieposter.html"><img src="./Sivakarthikeya.jpg" height="200px" width="200px"></a>
+            <h2>SIVA KARTHIKEYAN</h2>
+            </div>
+        
+    </div>
+</body>
+</html>

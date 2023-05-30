@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let otp = '';
+        for (let i = 1; i <= 4; i++) {
+            num = Math.floor(Math.random() * 10)
+            otp = otp + num
+        }
+        let OTP = otp;
+        alert(otp);
+        
+        function otp_verification() {
+            let key=['deep@gmail.com',8940179206,'rishi@gmail.com',9876543210,'agil@gmail.com',9999999999];
+            let Num=document.getElementById("num").value;
+            let flag=false;
+            for(let i=0;i<key.length;i++){
+                if(Num==key[i]){
+                    flag=true;
+                }
+            }
+            let entered_otp = document.getElementById("otp").value;
+            if (OTP == entered_otp && flag==true) {
+                window.location.href = "./index.html";
+            } else {
+                document.getElementById("result").innerHTML="Incorrect OTP Or Invalid Details";
+                document.getElementById("result").style.color="cadetblue";
+            }
+        }
+
+        function resend_otp() {
+            window.location.href = "./forgotpass.html";
+        }
+    </script>
+    <style>
+        *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+    }
+    #maindiv{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 3px cadetblue solid;
+        border-radius: 75px;
+        font-family: sans-serif;
+        height: 300px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    #box1{
+        display: flex;
+        justify-content: center;
+        border: 3px transparent solid;
+        border-radius: 25px;
+        font-family: sans-serif;
+        width: 350px;
+        height: 40px;
+        margin-top: 0px;
+        margin-left: 20px;
+        margin-right: 40px;
+        margin-bottom: 0px;
+    }
+    #box2{
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        width: 350px;
+        border: 3px transparent solid;
+        border-radius: 15px;
+        margin-top: 0px;
+        margin-left: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
+    .center1{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+    }
+    h1{
+        margin-top: 20px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    input{
+        border: 5px cadetblue;
+        border-radius: 10px;
+        height: 30px;
+        margin: 5px;
+        
+    }
+    button{
+        border: 5px cadetblue;
+        border-radius: 10px;
+        height: 30px;
+        margin: 5px;
+    }
+    ::placeholder{
+        color: cadetblue;
+        
+    }
+    #otp{
+        height: 30px;
+        width: 200px;
+        margin-left: 70px;
+        margin-right: auto;
+        justify-content: center;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 15px;
+    }
+    #otp:focus{
+        outline: none;
+        border:2px cadetblue solid;
+        border-radius: 10px;
+    }
+    #num{
+        height: 30px;
+        width: 200px;
+        margin-left: 70px;
+        margin-right: auto;
+        justify-content: center;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 15px;
+    }
+    #num:focus{
+        outline: none;
+        border:2px cadetblue solid;
+        border-radius: 10px;
+    }
+    #submit{
+        height: 30px;
+        width: 100px;
+        margin-left: 130px;
+        margin-right: auto;
+        background-color: cadetblue;
+        color: aliceblue;
+        font-weight: bold;
+        
+    }
+    #submit:hover{
+        background-color: aliceblue;
+        color: cadetblue;
+        cursor: pointer;
+    }
+    #resend{
+        height: 30px;
+        width: 100px;
+        margin-right: auto;
+        margin-left: 130px;
+        background-color: rgba(0, 0, 0, 0.932);
+        color: cadetblue;
+    }
+    #resend:hover{
+        background-color: aliceblue;
+        color: cadetblue;
+        cursor: pointer;
+    }
+    p{
+        padding-left: 65px;
+    }
+    </style>
+    <title>ForgotPassword.Spotprime</title>
+</head>
+<body>
+    <h1 style="color: cadetblue; text-align: center;">SPOTPRIME</h1>
+    <div id="maindiv">
+        <div id="box1">
+            <h2 style="color:cadetblue; text-align: center;">Forgot Password</h2>
+        </div>
+        <div id="box2">
+    <div id="form">
+        
+            
+                <input type="text" placeholder="Enter Email Id/Phone Number" id="num">
+                <input type="number" placeholder="Enter OTP" id="otp">
+                <button onclick="otp_verification()" id="submit">Verify</button>
+                <button onclick="resend_otp()" id="resend">Resend OTP</button>
+                <p id="result"></p>
+                
+    </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <img src="./logo.png" height="100px" class="center1">
+</body>
+</html>

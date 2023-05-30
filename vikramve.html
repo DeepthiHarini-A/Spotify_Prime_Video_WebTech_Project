@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKRAM VEDHA</title>
+    <script>
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+    <style>
+        body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+        font-family: sans-serif;
+        }
+        p{
+            color: cadetblue;
+        }
+        h1{
+            color: cadetblue;
+            text-align: center;
+        }
+        h2{
+            color: cadetblue;
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #div1{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        img{
+        border-radius: 25px;
+    }
+    #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1110px;
+    }
+    #theme{
+        font-size: x-large;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="./logo.png" height="50px" width="150px">
+        <div id="subdiv1">
+            <h1 style="display: inline; color: cadetblue; margin-left: 10px;" id="theme">Theme</h1>
+            <button onclick="bgdark()" style="border: 1px cadetblue solid; margin-left: 10px; border-radius: 10px; height: 20px; width: 20px; background-color: black;"></button>
+            <button onclick="bglight()" style="border: 1px cadetblue solid; margin-left: 5px; border-radius: 10px; height: 20px; width: 20px; background-color: white;"></button>
+            </div>
+        <a href="./index.html"><img  align="right" src="./home.jpg" height="50px" width="50px"></a>
+    </div>
+    <h1>VIKRAM VEDHA</h1>
+    <p>                              </p>
+    <p>
+        Vikram Vedha is a 2022 Indian Hindi-language neo-noir action thriller film written and directed by Pushkar–Gayathri and jointly produced by YNOT Studios, Friday Filmworks, Reliance Entertainment, T-Series Films, Jio Studios and Theme Studios. A remake of the duo's 2017 Tamil film of the same name, it is inspired by the Indian folktale Baital Pachisi and stars Saif Ali Khan and Hrithik Roshan as the titular anti-heroes. while Radhika Apte, Rohit Saraf and Yogita Bihani play supporting roles. In the film, a police officer sets out to track down and kill a dreaded gangster.
+    </p>
+    
+    <video src="./Vikram Vedha Official Trailer _ Hrithik Roshan, Saif Ali Khan, Pushkar & Gayatri _IN CINEMAS 30 SEPT.mp4" controls loop muted heigth="800px" width="800px" class="center"></video>
+    <h2>Ratings 3.5/5</h2>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp.Spotprime</title>
+    <script>
+        function Validation(){
+            
+            // validate mobile number
+            let Phone=document.getElementById("phone").value;
+            let flag_phone=false;
+            if((6000000000 <= Phone)&&(Phone<=9999999999)){
+                flag_phone=true;
+            }
+            //validate mailId
+            let Mail=document.getElementById("mail").value;
+            let flag_mail=false;
+            for(let i=0;i<Mail.length;i++){
+                if (Mail[i]=='@'){
+                    flag_mail=true;
+                }
+            }
+
+            // validate password
+            let Pass=document.getElementById("pass").value;
+            let upper=0;
+            let lower=0;
+            let num=0;
+            let special=0;
+            let flag_pass=false;
+            for(let i=0;i<Pass.length;i++){
+                if((Pass[i]>='A')&&(Pass[i]<='Z')){
+                    upper++;
+                }
+                else if((Pass[i]>='a')&&(Pass[i]<='z')){
+                    lower++;
+                }
+                else if((Pass[i]>='0')&&(Pass[i]<='9')){
+                    num++;
+                }
+                else{
+                    special++;
+                }
+            }
+            if((Pass.length>=8)&& (Pass.length<=16)&& (upper>=1)&& (lower>=1)&& (num>=1)&& (special>=1)){
+                flag_pass=true;
+            }
+
+            //validate Confirn password
+            let Cpass=document.getElementById("cpass").value;
+            let flag_cpass=false;
+            if(Pass==Cpass){
+                flag_cpass=true;
+            }
+            // main verification
+            
+            if((flag_phone==true)&&(flag_mail==true)&&(flag_pass==true)&&(flag_cpass==true)){
+                window.location.href="./otp.html";
+            }
+            else{
+                document.getElementById("result").innerHTML="Enter Valid Details";
+                document.getElementById("result").style.color="cadetblue";
+            }
+        }
+    </script>
+</head>
+<style>
+    #result{
+        color: white;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        margin-top: 30px;
+        flex-direction: column;
+        border: 3px cadetblue solid;
+        border-radius: 50px;
+        height: 450px;
+    }
+    .center1{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        border: 3px transparent solid;
+        flex-direction: column;
+        width: 350px;
+    }
+    .center2{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        margin-top: 10px;
+    }
+    h1{
+        margin-top: 20px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    h2{
+        text-align: center;
+        color:cadetblue;
+    }
+    label{
+        color: cadetblue;
+    }
+    .in1{
+        border: 3px transparent solid;
+        border-radius: 10px;
+        width: 250px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 10px;
+        color: cadetblue;
+    }
+    .in1:focus{
+        outline: none;
+        border:3px cadetblue solid;
+        border-radius: 10px;
+    }
+    ::placeholder{
+        color: cadetblue;
+    }
+    body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        font-family: sans-serif;
+        background-image: url("bag5.png");
+        
+    }
+    #in2{
+        border: 3px cadetblue solid;
+        border: 3px cadetblue solid;
+        border-radius: 20px;
+        height: 80px;
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        background-color:cadetblue;
+        padding-left: 20px;
+        color: white;
+        cursor: pointer;
+    }
+    #in2:hover{
+        background-color: aliceblue;
+        color: cadetblue;
+        cursor: pointer;
+        border: 3px transparent solid;
+    }
+    #in2:focus{
+        outline: none;
+        border-radius: 20px;
+    }
+    #row{
+        padding-left: 0px;
+        justify-content: center;
+    }
+    
+</style>
+<body>
+    <h1 style="color: cadetblue;">SPOTPRIME</h1>
+    
+    
+    
+        <div class="center">
+            
+            <h2>SIGN UP</h2>
+                <input type="text" class="in1" id="name" placeholder="Enter Your Name">
+                <br>
+            
+            
+                
+                <input type="number" class="in1" id="phone" placeholder="Enter Your Phone Number">
+                <br>
+            
+            
+                
+                <input type="email" class="in1" id="mail" placeholder="Enter Your Mail Id">
+                <br>
+            
+            
+                
+                <input type="password" class="in1" id="pass" placeholder="Password">
+                <br>
+            
+            
+                
+                <input type="password" class="in1" id="cpass" placeholder="Confirm Password">
+                <br>
+            
+                <p style="margin-left: auto; margin-right: auto;"><input type="checkbox">
+                <label>Terms & Conditions</label></p>
+        
+            
+            <button onclick="Validation()" id="in2">SignUp</button><p id="result" style="margin-left: auto; margin-right: auto;"></p>
+            
+        </div> 
+        
+    
+    
+    <img src="./logo.png" height="100px" width="500px" class="center1">
+</body>
+</html>

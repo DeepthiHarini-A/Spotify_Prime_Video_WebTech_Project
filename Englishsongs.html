@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Songs</title>
+    <script>
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        img{
+        border-radius: 25px;
+    }
+        body{
+            background-size: 1500px 800px;
+            background-repeat: repeat;
+            font-weight: bolder;
+            background-image: url("./bag5.png");
+            font-family: sans-serif;
+        }
+        #div1{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h2{
+            color:cadetblue;
+        }
+        #div2{
+            display: grid;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+        grid-template-columns: auto auto auto ;
+        margin-left: 100px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        }
+        #subdiv{
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+        audio{
+        color: cadetblue;
+        height: 50px;
+        width: 225px;
+        }  
+        #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1110px;
+        }
+        #theme{
+        font-size: x-large;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="./logo.png" height="50px" width="150px"><h1 style="color: cadetblue; text-align: center; display: inline;">English Songs</h1>
+        <div id="subdiv1">
+            <h1 style="display: inline; color: cadetblue; margin-left: 10px;" id="theme">Theme</h1>
+            <button onclick="bgdark()" style="border: 1px cadetblue solid; border-radius: 10px; height: 20px; width: 20px; background-color: black; margin-left: 10px;"></button>
+            <button onclick="bglight()" style="border: 1px cadetblue solid; border-radius: 10px; height: 20px; width: 20px; background-color: white; margin-left: 5px;" ></button>
+            </div>
+        <a href="./index.html"><img  align="right" src="./home.jpg" height="50px" width="50px"></a>
+    </div>
+    <div id="div2">
+        
+        <div id="subdiv">
+                <img src="./dyna.jpg" height="200px" width="200px">
+                <h2>Dynamite</h2><br>
+                    <audio src="./BTS_-_Dynamite-MPOSA.CO.ZA.mp3" controls loop muted></audio>
+            </div>
+                    <div id="subdiv">
+                <img src="./look what.jpg" height="200px" width="200px">
+                <h2>Look What</h2><br>
+                    <audio src="./Taylor Made Me Do.mp3" controls loop muted></audio>
+                </div>
+                    <div id="subdiv">
+                <img src="./lover.jpeg" height="200px" width="200px">
+                <h2>Lover</h2><br>
+                    <audio src="./Lover - Taylor.mp3" controls loop muted></audio>
+                </div>
+                    <div id="subdiv">
+                <img src="./lovesto.jpg" height="200px" width="200px">
+                <h2>Love Story</h2><br>
+                    <audio src="./Love-Story(PaglaSongs).mp3" controls loop muted></audio>
+                </div>
+                    <div id="subdiv">
+                <img src="./midnight.jpg" height="200px" width="200px">
+                <h2>Midnight Rain</h2><br>
+                    <audio src="./Midnight - Taylor Swift - English.mp3" controls loop muted></audio>
+                </div>
+                    <div id="subdiv">
+                <img src="./anti hero.jpg" height="200px" width="200px">
+                <h2>Anti Hero</h2><br>
+                    <audio src="./Its Me I - Anti Hero - Taylor Swift ! English Song.mp3" controls loop muted></audio>
+                    </div>
+                    <div id="subdiv">
+                <img src="./pay.jpg" height="200px" width="200px">
+                <h2>Pay Phone</h2><br>
+                    <audio src="./Maroon_5_ft_Wiz_Khalifa_-_Payphone_(Jesusful.com).mp3" controls loop muted></audio>
+                </div>
+                    <div id="subdiv">
+                <img src="./until.jpg" height="200px" width="200px">
+                <h2>Until I Found You</h2><br>
+                    <audio src="./Until I Found You.mp3" controls loop muted></audio>
+                </div>
+                    <div id="subdiv">
+                <img src="./youare.jpg" height="200px" width="200px">
+                <h2>You Are On Your Own Kid</h2><br>
+                    <audio src="./Taylor Swift - Youre On Your Own Kid-(MastiNew).mp3" controls loop muted></audio>
+                </div>
+        </div>        
+</body>
+</html>

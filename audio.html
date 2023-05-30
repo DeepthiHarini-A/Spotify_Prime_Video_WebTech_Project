@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listen Songs</title>
+    <script>
+        function search(){
+            let choice=document.getElementById("social").value;
+            if(choice=="english"){
+                window.location.href="./Englishsongs.html";
+            }
+            else if(choice=="tamil"){
+                window.location.href="./TamilSongs.html";
+            }
+        }
+        function bgdark(){
+        document.body.style.backgroundImage = "url('./black.jpg')";
+        }
+        function bglight(){
+        document.body.style.backgroundImage = "url('./white.jpg')";
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    img{
+        border-radius: 25px;
+    }
+    body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+        font-family: sans-serif;
+    }
+    .center{
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+        grid-template-columns: auto auto auto;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        
+    }
+    h1{
+    
+        text-align: center;
+    }
+    select{
+        border: 5px cadetblue;
+            border-radius: 10px;
+            width: fit-content;
+    }
+    input{
+        border: 3px cadetblue solid;
+        border-radius: 15px;
+        height: 30px;
+        width: 350px;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 15px;
+        margin-left: 100px;
+    }
+    input:focus{
+        border: 3px cadetblue solid;
+        outline: none;
+        border-radius: 15px;
+    }
+    ::placeholder{
+        color: cadetblue;
+    }
+    #div1{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    a{
+        color: cadetblue;
+        text-decoration: none;
+    }
+    a:hover{
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    select{
+        border: 3px cadetblue solid;
+        border-radius: 15px;
+        height: 35px;
+        width: 100px;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 5px;
+        margin-left: 10px;
+    }
+    button{
+        height: 35px;
+        width:50px;
+        color: cadetblue;
+        background-color: black;
+        border: 3px cadetblue solid;
+        border-radius: 15px;
+        margin-left: 5px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    select:focus{
+        border: 3px cadetblue solid;
+        outline: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    select:hover{
+        cursor: pointer;
+    }
+    #div2{
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    h2{
+        color: cadetblue;
+    }
+    tr{
+        margin: 20px;
+    }
+    .subdiv{
+        margin: 20px;
+    }
+    audio{
+        
+        color: cadetblue;
+        height: 50px;
+        width: 225px;
+    }
+    .fa-magnifying-glass{
+        position: absolute;
+        color: cadetblue;
+        top: 80px;
+        left: 800px;
+    }
+    #subdiv1{
+        position: absolute;
+        top:15px;
+        left: 1120px;
+    }
+    #theme{
+        font-size: x-large;
+    }
+</style>
+<body>
+    <div id="div1">
+    <img src="./logo.png" height="50px" width="150px"><h1 style="color: cadetblue; text-align: center; display: inline;">Listen To Your Favourite Songs</h1>
+        <div id="subdiv1">
+            <h1 style="display: inline; color: cadetblue;" id="theme">Theme</h1>
+            <button onclick="bgdark()" style="border: 1px cadetblue solid; border-radius: 10px; height: 20px; width: 20px;"></button>
+            <button onclick="bglight()" style="border: 1px cadetblue solid; border-radius: 10px; height: 20px; width: 20px; background-color: white;"></button>
+            </div>
+            <a href="./index.html"><img  align="right" src="./home.jpg" height="50px" width="50px"></a>
+    </div>
+    <div id="div2">
+            <input type="text" list="search" placeholder="Search"><i class="fa-solid fa-magnifying-glass"></i>
+            <datalist id="search">
+                <option>Kannana kanne</option>
+                <option>Eley keecha</option>
+                <option>You're on your own</option>
+                <option>Dynamite</option>
+                <option>yaarum illa</option>
+                <option>Love story</option>
+            </datalist>
+                <select id="social">
+                    <option value="" disabled selected>Languages</option>
+                    <option value= "english">English</option>
+                    <option value="tamil">Tamil</option>
+                </select>
+                <button onclick="search()">Next</button>
+    </div>
+    <h2 style="color:cadetblue; text-align: center;">Recently Played</h2>
+    <div class="center">
+        
+                <div class="subdiv">
+                <img src="./vaathi comi.jpg" height="200px" width="200px">
+                <h2>Vaathi Coming</h2><br>
+                    <audio src="./Vaathi-Coming-MassTamilan.io.mp3" controls loop muted></audio></div>
+                    <div class="subdiv">
+                    <img src="./anti hero.jpg" height="200px" width="200px">
+                    <h2>Anti Hero</h2><br>
+                    <audio src="./Its Me I - Anti Hero - Taylor Swift ! English Song.mp3" controls loop muted></audio>
+                    </div>
+                <div class="subdiv">
+                <img src="./masterbla.jpg" height="200px" width="200px">
+                <h2>Master The Blaster</h2><br>
+                    <audio src="./Master-the-Blaster-MassTamilan.io.mp3" controls loop muted></audio>
+                </div>
+                <div class="subdiv">    
+                    <img src="./dyna.jpg" height="200px" width="200px">
+                    <h2>Dynamite</h2><br>
+                    <audio src="./BTS_-_Dynamite-MPOSA.CO.ZA.mp3" controls loop muted ></audio>
+                </div>    
+                <div class="subdiv">
+                <img src="./until.jpg" height="200px" width="200px">
+                <h2>Until I Found You</h2><br>
+                    <audio src="./Until I Found You.mp3" controls loop muted></audio>
+                </div>
+                <div class="subdiv">    
+                    <img src="./then.jpg" height="200px" width="200px">
+                    <h2>ThenMozhi</h2><br>
+                        <audio src="./Thenmozhi-MassTamilan.dev.mp3" controls loop muted></audio>
+                </div>
+            
+        
+    </div>
+</body>
+</html>

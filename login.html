@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login.SpotPrime</title>
+    <script>
+        function Login(){
+            let db={'Deepthi':'Deepthi@123'
+                    ,'Rishi':'Rishi@123'
+                    ,'Agilesh':'Agil@123',
+                    };
+            let username=document.getElementById("user").value;
+            let password=document.getElementById("pass").value;
+            let key=Object.keys(db);
+            let flag=false
+            for(let i=0;i<key.length;i++){
+                if(username==key[i]){
+                    if(db[key[i]]==password){
+                        flag=true
+                    }
+                }
+            }
+            if(flag==true){
+                window.location.href="./index.html";
+            }
+            else{
+                document.getElementById("result").innerHTML="Enter Valid Details";
+            }
+        }
+    </script>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.932);
+        font-weight: bolder;
+        background-image: url("./bag5.png");
+    }
+    h2{
+        text-align: center;
+    }
+    h1{
+        margin-top: 20px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+    }
+    #form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-top: 0px;
+    }
+    input{
+        border: 5px cadetblue;
+        border-radius: 10px;
+        height: 30px;
+        margin: 5px;
+        
+    }
+    #user{
+        height: 30px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        color: cadetblue;
+        background-color: rgba(0, 0, 0, 0.932);
+        padding-left: 15px;
+        
+    }
+    ::placeholder{
+        color: cadetblue;
+        
+    }
+    #user:focus,#pass:focus{
+        outline: none;
+        border:2px cadetblue solid;
+        border-radius: 10px;
+    }
+    #pass{
+        height: 30px;
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.932);
+        color: cadetblue;
+        padding-left: 15px;
+    }
+    #reset{
+        height: 30px;
+        width: 280px;
+        display: inline;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: rgba(0, 0, 0, 0.932);
+        color: cadetblue;
+    }
+    #reset:hover{
+        background-color: aliceblue;
+        color: blue;
+        cursor: pointer;
+    }
+    #login{
+        height: 30px;
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: cadetblue;
+        color: aliceblue;
+        font-weight: bold;
+        
+    }
+    #login:hover{
+        background-color: aliceblue;
+        color: cadetblue;
+        cursor: pointer;
+    }
+    img{
+        display: inline;
+        margin-top: 30px;
+        height: 100px;
+        width: 500px;
+    }
+    a{
+        color: cadetblue;
+        margin-bottom: 15px;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    #maindiv{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 3px cadetblue solid;
+        border-radius: 100px;
+        font-family: sans-serif;
+        height: 350px;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    #box1{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 3px transparent solid;
+        border-radius: 40px;
+        font-family: sans-serif;
+        width: 350px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 20px;
+        
+    }
+    #result{
+        color: cadetblue;
+    }
+    #box11{
+        display: flex;
+        justify-content: center;
+        
+        height: 300px;
+        width: 350px;
+        border: 3px transparent solid;
+        border-radius: 40px;
+        margin-top: 0px;
+        margin-left: 40px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    #forgot{
+        padding-left: 1px;
+        text-decoration: none;
+    }
+    #forgot:hover{
+        text-decoration: underline;
+    }
+    #new{
+        margin-top: 5px;
+        padding-left: 8px;
+    }
+    #sign{
+        text-decoration: none;
+    }
+    #sign:hover{
+        text-decoration: underline;
+    }
+    #sign:visited{
+        color: blue;
+    }
+    #imdiv{
+        position: absolute;
+        border: 2px transparent solid;
+        border-radius: 25px;
+        top: 25px;
+        left: 20px;
+        height: 540px;
+        width:400px;
+        background-image: url("./collagem.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    button{
+        border: 5px cadetblue;
+        border-radius: 10px;
+        height: 30px;
+        margin: 5px;
+    }
+</style>
+<body>
+    <h1 style="color: cadetblue;">SPOTPRIME</h1>
+    <div id="maindiv">
+    <div id="box1">
+    <h2 style="color:cadetblue;" id="log">Login</h2>
+    </div>
+    <div id="box11">
+    <div id="form">
+                <input type="text" placeholder="Enter Username" id="user">
+                <input type="password" placeholder="Enter Password" id="pass">
+                <button id="login" onclick="Login()">Login</button>
+                <p id="result"></p>
+                <a href="./forgotpass.html" id="forgot">Forgot Password?</a>
+                <p style="color: cadetblue;"id="new">ARE YOU NEW USER?<a href="./signup.html" style="color: cadetblue;" id="sign">Signup</a></p>
+    </div>
+            </div>
+</div>
+    <img src="./logo.png" height="100px" width="500px" class="center">
+</body>
+</html>
